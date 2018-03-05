@@ -18,12 +18,11 @@
 
 ## JavaScript
 
-* [JavaScript-基本语法、变量声明](https://github.com/wenbobao/learn-web/blob/master/js/JavaScript-
+* [JavaScript-基本语法、变量声明](https://github.com/wenbobao/learn-web/blob/master/js/JavaScript-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E3%80%81%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E.md)
 * [JavaScript-函数](https://github.com/wenbobao/learn-web/blob/master/js/JavaScript-%E5%87%BD%E6%95%B0.md)
 * [JavaScript-流程控制之循环与迭代](https://github.com/wenbobao/learn-web/blob/master/js/JavaScript-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E4%B9%8B%E5%BE%AA%E7%8E%AF%E4%B8%8E%E8%BF%AD%E4%BB%A3.md)
 * [JavaScript-流程控制之条件判断](https://github.com/wenbobao/learn-web/blob/master/js/JavaScript-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E4%B9%8B%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD.md)
 * [JavaScript-错误处理](https://github.com/wenbobao/learn-web/blob/master/js/JavaScript-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86.md)
-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E3%80%81%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E.md)
 * [JavaScript-Promise](https://github.com/wenbobao/learn-web/blob/master/js/JavaScript-Promises.md)
 
 ## Angular 
@@ -33,4 +32,9 @@
 ## Ionic
 
 [Ionic](https://github.com/wenbobao/learn-ionic)
+
+## Vue
+
+[Vue2](https://github.com/wenbobao/learn-vue2)
+
 
