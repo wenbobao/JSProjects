@@ -1,0 +1,60 @@
+/* p {
+  color: blue;
+} */
+
+strong {
+    color: red;
+    text-decoration: underline;
+}
+
+.carrot {
+    color: orange;
+}
+
+.spinach {
+    color: green;
+}
+
+#first {
+    font-style: italic;
+}
+
+a.homepage:link,
+a.homepage:visited {
+    padding: 1px 10px 1px 10px;
+    color: #fff;
+    background: #555;
+    border-radius: 3px;
+    border: 1px outset rgba(50, 50, 50, .5);
+    font-family: georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: none;
+}
+
+a.homepage:hover,
+a.homepage:focus,
+a.homepage:active {
+    background-color: #666;
+}
+
+.inputs::before {
+    font-weight: bold;
+    color: navy;
+    content: "Name:";
+}
+
+h3 {
+    border-top: 4px solid #7c7;
+    /* 中绿 */
+    background-color: #efe;
+    /* 浅绿 */
+    color: #050;
+    /* 深绿 */
+}
+
+p.remark {
+  border: 2px solid red;
+  padding: 4px;
+  margin-left: 24px;
+}
