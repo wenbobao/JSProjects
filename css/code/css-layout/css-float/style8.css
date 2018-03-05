@@ -1,0 +1,29 @@
+.wrapper {
+  overflow: hidden; //清除浮动
+}
+
+.middle {
+  width: 100%;
+  float: left;
+}
+
+.middle .main {
+  margin: 0 220px;
+  background: red;
+}
+
+.left {
+  width: 200px;
+  height: 300px;
+  float: left;
+  background: green;
+  margin-left: -100%;
+}
+
+.right {
+  width: 200px;
+  height: 300px;
+  float: left;
+  background: yellow;
+  margin-left: -200px;
+}
