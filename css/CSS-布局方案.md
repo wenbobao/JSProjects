@@ -1,0 +1,121 @@
+# 居中布局
+
+## 水平居中
+
+(1) 使用 `inline-block` + `text-align`
+原理: 先将子框由块级元素改变为行内块元素，再通过设置行内块元素居中以达到水平居中。
+用法: 对子框设置display:inline-block，对父框设置text-align:center。
+代码:
+
+```
+<div class="parent">
+  <div class="child">DEMO</div>
+</div>
+```
+
+```
+.child {
+    display: inline-block;
+}
+
+.parent {
+  text-align: center;
+}
+```
+
+优点:兼容性好，甚至可以兼容ie6、ie7
+缺点:child里的文字也会水平居中，可以在.child添加text-align:left;还原
+
+(2) 使用 `table` + `margin`
+
+原理: 先将子框设置为块级表格来显示（类似 <table>），再设置子框居中以达到水平居中。
+用法: 对子框设置display:table，再设置margin:0 auto。
+代码:
+
+```
+<div class="parent">
+  <div class="child">DEMO</div>
+</div>
+```
+
+```
+.child {
+    display:table;
+    margin:0 auto;
+}
+```
+
+优点: 只设置了child，ie8以上都支持
+缺点: 不支持ie6、ie7,将div换成table
+
+(3) 使用 `absolute` + `transform`
+
+原理: 将子框设置为绝对定位，移动子框，使子框左侧距离相对框左侧边框的距离为相对框宽度的一半，再通过向左移动子框的一半宽度以达到水平居中。当然，在此之前，我们需要设置父框为相对定位，使父框成为子框的相对框。
+用法: 对父框设置position:relative，对子框设置position:absolute，left:50%，transform:translateX(-50%)。
+代码:
+
+```
+<div class="parent">
+  <div class="child">DEMO</div>
+</div>
+```
+
+```
+.parent {
+    position:relative;
+}
+.child {
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+}
+```
+
+优点:居中元素不会对其他的产生影响
+缺点:transform属于css3内容，兼容性存在一定问题，高版本浏览器需要添加一些前缀
+
+(4) 使用 `flex` + `margin`
+
+原理：通过CSS3中的布局利器flex将子框转换为flex item，再设置子框居中以达到居中。
+用法：先将父框设置为display:flex，再设置子框margin:0 auto。
+代码:
+
+```
+<div class="parent">
+  <div class="child">DEMO</div>
+</div>
+```
+
+```
+.parent {
+    display:flex;
+}
+.child {
+    margin:0 auto;
+}
+```
+
+缺点:低版本浏览器(ie6 ie7 ie8)不支持
+
+
+(5) 使用 `flex` + `justify-content`
+
+原理: 通过CSS3中的布局利器flex中的justify-content属性来达到水平居中。
+用法: 先将父框设置为display:flex，再设置justify-content:center。
+代码:
+
+```
+<div class="parent">
+  <div class="child">DEMO</div>
+</div>
+```
+
+```
+.parent {
+    display:flex;
+    justify-content:center;
+}
+```
+
+优点: 设置parent即可
+缺点: 低版本浏览器(ie6 ie7 ie8)不支持
