@@ -193,4 +193,80 @@
 优点: 设置parent即可
 缺点: 低版本浏览器(ie6 ie7 ie8)不支持
 
+## 水平垂直居中
 
+(1) 使用 `absolute` + `transform`
+
+原理: 将水平居中时的absolute+transform和垂直居中时的absolute+transform相结合。详见：水平居中的3）和垂直居中的2）。
+用法: 见水平居中的3）和垂直居中的2）。
+代码:
+
+```
+<div class="parent">
+  <div class="child">DEMO</div>
+</div>
+```
+
+```
+.parent {
+    position:relative;
+}
+.child {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:tranplate(-50%,-50%);
+}
+```
+
+优点:居中元素不会对其他的产生影响
+缺点:transform属于css3内容，兼容性存在一定问题，高版本浏览器需要添加一些前缀
+
+(2) 使用 `inline-block` + `text-align` + `table-cell `+ `vertical-align`
+
+原理: 使用inline-block+text-align水平居中，再用table-cell+vertical-align垂直居中，将二者结合起来。详见：水平居中的1）和垂直居中的1）。
+用法: 见水平居中的1）和垂直居中的1）。。
+代码:
+
+```
+<div class="parent">
+  <div class="child">DEMO</div>
+</div>
+```
+
+```
+.parent {
+    text-align:center;
+    display:table-cell;
+    vertical-align:middle;
+}
+.child {
+    display:inline-block;
+}
+```
+
+优点:兼容性较好
+
+
+(3) 使用 `flex` + `align-items` + `justify-content`
+
+原理：通过设置CSS3布局利器flex中的justify-content和align-items，从而达到水平垂直居中。详见：水平居中的4）和垂直居中的3）。
+用法：先将父框设置为position:flex，再设置 align-items:center justify-content:center。
+代码:
+
+```
+<div class="parent">
+  <div class="child">DEMO</div>
+</div>
+```
+
+```
+.parent {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+```
+
+优点: 设置parent即可
+缺点: 低版本浏览器(ie6 ie7 ie8)不支持

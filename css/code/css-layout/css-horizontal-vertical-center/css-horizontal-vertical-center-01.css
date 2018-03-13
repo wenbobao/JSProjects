@@ -1,0 +1,9 @@
+.parent {
+  position:relative;
+}
+.child {
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:tranplate(-50%,-50%);
+}
