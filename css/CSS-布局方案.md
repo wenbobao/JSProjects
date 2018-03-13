@@ -119,3 +119,78 @@
 
 优点: 设置parent即可
 缺点: 低版本浏览器(ie6 ie7 ie8)不支持
+
+
+## 垂直居中
+
+(1) 使用 `table-cell` + `vertical-align`
+
+原理：通过将父框转化为一个表格单元格显示（类似 <td> 和 <th>），再通过设置属性，使表格单元格内容垂直居中以达到垂直居中。
+用法：先将父框设置为display:table-cell，再设置vertical-align:middle。
+代码:
+
+```
+<div class="parent">
+  <div class="child">DEMO</div>
+</div>
+```
+
+```
+.parent {
+    display:table-cell;
+    vertical-align:middle;
+}
+```
+
+优点:兼容性较好，ie8以上均支持
+
+
+(2) 使用 `absolute` + `transform`
+
+原理: 类似于水平居中时的absolute+transform原理。将子框设置为绝对定位，移动子框，使子框上边距离相对框上边边框的距离为相对框高度的一半，再通过向上移动子框的一半高度以达到垂直居中。当然，在此之前，我们需要设置父框为相对定位，使父框成为子框的相对框。
+用法: 先将父框设置为position:relative，再设置子框position:absolute，top:50%，transform:translateY(-50%)。
+代码:
+
+```
+<div class="parent">
+  <div class="child">DEMO</div>
+</div>
+```
+
+```
+.parent {
+    position:relative;
+}
+.child {
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+}
+```
+
+优点:居中元素不会对其他的产生影响
+缺点:transform属于css3内容，兼容性存在一定问题，高版本浏览器需要添加一些前缀
+
+(3) 使用 `flex` + `align-items`
+
+原理：通过设置CSS3中的布局利器flex中的属性align-times，使子框垂直居中。
+用法：先将父框设置为position:flex，再设置align-items:center。
+代码:
+
+```
+<div class="parent">
+  <div class="child">DEMO</div>
+</div>
+```
+
+```
+.parent {
+    position:flex;
+    align-items:center;
+}
+```
+
+优点: 设置parent即可
+缺点: 低版本浏览器(ie6 ie7 ie8)不支持
+
+
