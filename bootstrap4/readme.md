@@ -23,3 +23,19 @@ Bootstrap 需要为页面内容和栅格系统包裹一个 .container 容器。
   ...
 </div>
 ```
+
+## 网格系统
+
+* .col- 针对所有设备
+* .col-sm- 平板 - 屏幕宽度等于或大于 576px
+* .col-md- 桌面显示器 - 屏幕宽度等于或大于 768px)
+* .col-lg- 大桌面显示器 - 屏幕宽度等于或大于 992px)
+* .col-xl- 超大桌面显示器 - 屏幕宽度等于或大于 1200px)
+
+列偏移 `offset-md-4`
+
+## 文字排版
+
+Bootstrap4 默认`font-size`为16px, `line-height`为1.5, 默认的 `font-family` 为 "Helvetica Neue", Helvetica, Arial, sans-serif。
+
+<p> 元素 margin-top: 0 、 margin-bottom: 1rem (16px)。
