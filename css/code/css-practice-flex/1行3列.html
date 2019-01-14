@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>circel</title>
+  <style>
+    .text-center {
+      text-align: center;
+    }
+
+    .gird {
+      display: flex;
+    }
+
+    .gird-cell {
+      flex: 1;
+    }
+
+    /* 间隔 */
+    .gird--gutters {
+      margin: -1em 0 0 -1em;
+    }
+
+    .gird--gutters>.gird-cell {
+      margin: 1em 0 0 1em;
+    }
+
+    /* 行 */
+    .gird--top {
+      align-items: flex-start;
+    }
+
+    .gird--bottom {
+      align-items: flex-end;
+    }
+
+    .gird--center {
+      align-items: center;
+    }
+
+    /* 列 */
+    .gird-cell--top {
+      align-self: flex-start;
+    }
+
+    .gird-cell--bottom {
+      align-self: flex-end;
+    }
+
+    .gird-cell--center {
+      align-self: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="gird text-center">
+    <div class="gird-cell" style="background:yellow">1</div>
+    <div class="gird-cell" style="background:red">2</div>
+    <div class="gird-cell" style="background:orange">3</div>
+  </div>
+
+  <div class="gird gird--gutters text-center">
+    <div class="gird-cell" style="background:yellow">1</div>
+    <div class="gird-cell" style="background:red">2</div>
+  </div>
+
+  <div class="container">
+    <article>
+      <h1>Headlines Across the World</h1>
+    </article>
+  </div>
+</body>
+
+</html>
